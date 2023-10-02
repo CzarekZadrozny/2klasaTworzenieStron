@@ -1,0 +1,53 @@
+*{
+    font-family: helvetica;
+    background-color: #DDD;
+    color:#546E7A ;
+}
+.Lewo{
+    background-color: white;
+    height: 600px;
+    margin: 20px;
+    box-shadow: 20px 20px 20px 20px  gray;
+    width: 50%;
+}
+.prawo{
+    width: 24.2%;
+    float: right;
+    background-color: white;
+    height: 600px;
+    margin: 20px;
+    box-shadow: 20px 20px 20px 20px  gray;
+    margin-top: -0.7px;
+    margin-right: 300px;
+}
+h1{
+background-color: #5C6BC0;
+color: white;
+}
+p{
+    background-color: white;
+    padding-left: 50px;
+}
+b{
+    background-color: white;
+}
+.stopka{
+    background-color:  #5C6BC0 ;
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+}
+li{
+    background-color:  #5C6BC0;
+    color: white;
+}
+ul{
+    background-color:  #5C6BC0;
+}
+center{
+    background-color: white;
+}
+h2{
+    background-color: white;
+}
+

@@ -1,0 +1,16 @@
+*{
+font-family: serif;
+}
+.baner{
+    width: 100%;
+    text-align: center;
+    background:linear-gradient(#97b498,#c8e6c9);
+    color: white;
+    padding: 5px;
+}
+.lewy{
+    background-color: #c8e6c9;
+    color:  #005005;
+    width: 40%;
+    height: 600px;
+}

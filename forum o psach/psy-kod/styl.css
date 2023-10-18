@@ -14,3 +14,31 @@ font-family: serif;
     width: 40%;
     height: 600px;
 }
+.prawy{
+    float: right;
+    width: 60%;
+    color:  #005005;
+    height: 678px;
+    overflow: scroll;
+}
+.stopka{
+    margin-top: 77px;
+    background:linear-gradient(#c8e6c9,#97b498);
+    color: white;
+    padding: 12px;
+}
+textarea{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+}
+button{
+    background-color: #97b498;
+    color: white;
+    margin-left: 50px;
+}
+h2{
+    margin-left: 50px;
+}

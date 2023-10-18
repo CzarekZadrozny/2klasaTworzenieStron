@@ -15,6 +15,46 @@
 
     <main>
 
+    <div class="prawy">
+        <br>
+
+        <form method="POST">
+   <textarea name="odp" cols="40" rows="4"></textarea> <br>
+
+   <button type="submit" name="btn">Dodaj odpowiedz</button>
+</form>
+
+
+    <h2>Odpowiedzi na pytania</h2>
+
+<ol>
+    <?php
+
+    if($_SERVER["REQUEST_METHOD"] = "POST"){
+     $con = new mysqli('localhost','root','','forumpsy');
+
+    $odp = $_POST["odp"];
+
+    $zap = $con-> prepare("INSERT INTO odpowiedzi(odpowiedz, Pytania_id, konta_id) value(?,1,5)");
+
+    $zap->bind_param("s",$odp);
+
+    $zap->execute();
+    }
+
+    $wyn2 = $con->query("SELECT odpowiedzi.id, odpowiedzi.odpowiedz, konta.nick FROM odpowiedzi INNER JOIN konta ON konta.id = odpowiedzi.konta_id WHERE odpowiedzi.Pytania_id = '1'");
+
+    while($rel = mysqli_fetch_array($wyn2)){
+        echo'<li>'. $rel["odpowiedz"] .'</li><br><hr><br>';
+    };
+    
+    $con->close();
+
+    ?>
+    </ol>
+    </div>
+
+
 <div class="lewy">
 
     <img src="Avatar.png" alt="Użytkownik forum">
@@ -31,16 +71,19 @@
     '.$uz["pytanie"].'<br><br>';
 
     ?>
-    <    <video controls="controls" loop width="100%">
+       <video controls="controls" loop width="100%"">
         <source src="video.mp4" type="video/mp4" />
        </video>
 </div>
-<div class="prawy"></div>
 
     </main>
 
     <footer>
-<div class="stopka"></div>
+<div class="stopka">
+
+Autor:
+<a href="https://pl.wikipedia.org/wiki/Max_Verstappen">Czarek Zadrozny</a>
+</div>
     </footer>
     
 </body>

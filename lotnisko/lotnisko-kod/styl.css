@@ -1,0 +1,22 @@
+.baner1{
+    width: 25%;
+    height: 200px;
+    float: left;
+}
+.baner3{
+    width: 25%;
+    height: 200px;
+    float: right;
+}
+.baner2{
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    font-size: 250%;
+    float: left;
+}
+.main{
+background-color: rgb(0, 0, 128);
+padding: 60px;
+width: 100%;
+}

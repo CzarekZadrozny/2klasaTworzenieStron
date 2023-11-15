@@ -1,3 +1,7 @@
+<?php
+setcookie("ciastek",1,time()+3,"/")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,33 +27,43 @@
     <main>
         <div class="main">
             <center>
-            <?php 
+            <table>
+                <tr>
+                    <td style='width: 20%'>czas</td>
+                    <td style='width: 20%'>kierunek</td>
+                    <td style='width: 40%'>Numer miejsc</td>
+                    <td style='width: 500px'>Status</td>
+                </tr>
+    <?php 
             $con = new mysqli("localhost","root","","lotnisko");
             $zap=$con->query("SELECT * FROM `przyloty`");
 
             while($dane = mysqli_fetch_array($zap)){
-                echo" <table>
+                echo"
                 <tr>
-                    <td style='width: 20%;'>".$dane["czas"]."</td>
+                    <td>".$dane["czas"]."</td>
+                    <td>".$dane["kierunek"]."</td>
+                    <td>".$dane["nr_rejsu"]."</td>
+                    <td>".$dane["status_lotu"]."</td>
                 </tr>
-                </table>";
+                ";
             }
-
-            
-            
-            
-            $con->close();
-            
-            
-            
-            ?>
-          
+            $con->close();    
+    ?>
+          </table>
             </center>
         </div>
     </main>
     <footer>
         <div class="stopka1">
-        <p>Nasza strona korzytsa z ciasteczek</p>    
+        <p><?php
+            if(empty($_COOKIE["ciastek"])){
+                echo 'Witaj! Nasza strona korzysta z ciasteczek';
+            }
+            elseif($_COOKIE["ciastek"] == 1){
+                echo 'Witaj ponownie';
+            }
+            ?></p>    
         </div>
         <div class="stopka2">
             Autor: Czarek Zadrożny

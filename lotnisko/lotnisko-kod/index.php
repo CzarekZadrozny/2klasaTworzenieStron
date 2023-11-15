@@ -1,5 +1,5 @@
 <?php
-setcookie("ciastek",1,time()+3,"/")
+setcookie("ciastek",1,time()+3)
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +29,9 @@ setcookie("ciastek",1,time()+3,"/")
             <center>
             <table>
                 <tr>
-                    <td style='width: 20%'>czas</td>
-                    <td style='width: 20%'>kierunek</td>
-                    <td style='width: 40%'>Numer miejsc</td>
+                    <td style='width: 20%'>Czas</td>
+                    <td style='width: 20%'>Kierunek</td>
+                    <td style='width: 40%'>Numer rejsu</td>
                     <td style='width: 500px'>Status</td>
                 </tr>
     <?php 

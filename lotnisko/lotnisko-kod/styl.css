@@ -55,6 +55,7 @@ float: left;
 table, tr, td{
     border: 1px white solid ;
     border-collapse: collapse;
+    height: 30px;
     
 }
 table{

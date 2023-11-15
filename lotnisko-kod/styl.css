@@ -52,11 +52,11 @@ float: left;
     padding: 50px;
     box-sizing: border-box;
 }
-table, th, td{
+table, tr, td{
     border: 1px white solid ;
     border-collapse: collapse;
+    
 }
 table{
-    width: 100%;
     text-align: center;
 }

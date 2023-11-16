@@ -1,0 +1,90 @@
+.baner1{
+    width: 25%;
+    height: 200px;
+    float: left;
+    background-color: rgb(30, 144, 255);
+
+}
+.baner3{
+    width: 25%;
+    height: 200px;
+    float: right;
+    background-color: rgb(30, 144, 255);
+
+}
+.baner2{
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    font-size: 250%;
+    float: left;
+    background-color: rgb(30, 144, 255);
+
+}
+.main{
+background-color: rgb(0, 0, 128);
+width: 100%;
+text-align: center;
+padding: 20px;
+box-sizing: border-box;
+
+
+}
+body{
+    font-family: Georgia;
+    background-color: rgb(30, 144, 255);
+    color: white;
+    scrollbar-track-color: rgb(30, 144, 255);
+
+}
+p{
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 200%;
+    border: 1px solid rgb(192, 192, 192);
+}
+p:hover{
+background-color: rgb(192, 192, 192);}
+.stopka1{
+float: left;
+position: relative;
+animation-name: example1;
+animation-duration: 3s;  
+animation-fill-mode: forwards;
+animation-delay: 3s;
+  
+}
+@keyframes example1 {
+    from {top: 0px;}
+    to {top: 200px; opacity: 0;}
+  }
+.stopka2{
+    float: right;
+    padding: 50px;
+    box-sizing: border-box;
+}
+table, tr, td{
+    border: 1px white solid ;
+    border-collapse: collapse;
+    height: 30px;
+    
+}
+table{
+    text-align: center;
+}
+.zdj{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  { left:1500px; top:0px; }
+    50%  {right:150px; top:-500px; }
+    75%  {right:0px; top: 0px; }
+    100% {left:0px; top:0px;}
+  }

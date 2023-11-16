@@ -13,8 +13,9 @@ setcookie("ciastek",1,time()+3)
 <body>
     <header>
         <div class="baner1">
+            <div class="zdj">
             <img src="zad5bg.png" alt="lotniskoi">
-            
+            </div>
         </div>
         <div class="baner2">
             <h1>Przyloty</h1>

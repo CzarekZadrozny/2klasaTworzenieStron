@@ -34,6 +34,7 @@ body{
     font-family: Georgia;
     background-color: rgb(30, 144, 255);
     color: white;
+    scrollbar-track-color: rgb(30, 144, 255);
 
 }
 p{
@@ -46,7 +47,17 @@ p:hover{
 background-color: rgb(192, 192, 192);}
 .stopka1{
 float: left;
+position: relative;
+animation-name: example1;
+animation-duration: 3s;  
+animation-fill-mode: forwards;
+animation-delay: 3s;
+  
 }
+@keyframes example1 {
+    from {top: 0px;}
+    to {top: 200px; opacity: 0;}
+  }
 .stopka2{
     float: right;
     padding: 50px;
@@ -61,3 +72,19 @@ table, tr, td{
 table{
     text-align: center;
 }
+.zdj{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  { left:1500px; top:0px; }
+    50%  {right:150px; top:-500px; }
+    75%  {right:0px; top: 0px; }
+    100% {left:0px; top:0px;}
+  }

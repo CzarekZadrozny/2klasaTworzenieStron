@@ -36,8 +36,7 @@
 
             <button type="submit">Zapisz</button>
 
-            <?php 
-          
+            <?php
 
             if($_SERVER["REQUEST_METHOD"] = ["POST"]){
                 
@@ -47,7 +46,7 @@
                 $lastname = $_POST["nazwisko"];
                 $adres = $_POST["adres"];
     
-                $zap = $con -> query("INSERT INTO `karty_wedkarskie` (`id`, `imie`, `nazwisko`, `adres`, `data_zezwolenia`, `punkty`) VALUES ('NULL', '$name', '$lastname', '$adres', NULL, NULL)");
+                $zap = $con -> query("INSERT INTO `rezerwacje` (`id_rez`, `id_pok`, `liczba_dn`, `sezon`) VALUES ('NULL', '$pok', '$lastname', '$adres','NULL', 'NULL')");
                     
                 }
             ?>

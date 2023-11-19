@@ -1,10 +1,25 @@
-<<<<<<< HEAD
+<?php 
+   function zarezerwujOkres($dataPoczatkowa, $dataKoncowa, $con) {
+            
+    $sql = "
+    SELECT * FROM rezerwacje WHERE 
+    (data_poczatkowa BETWEEN ? AND ?) OR (data_koncowa BETWEEN ? AND ?)";
+
+    $zap2 = $con->prepare($sql);
+    $zap2->bind_param("ssss", $dataPoczatkowa, $dataKoncowa, $dataPoczatkowa, $dataKoncowa);
+    $zap2->execute();
+    $result2 = $zap2->get_result();
+    $zajeteOkresy = $result2->fetch_all(MYSQLI_ASSOC);
+
+if ($zajeteOkresy) {
+    echo "Okres jest już zarezerwowany. Wybierz inny termin.";}
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="stylr.css">
     <title>Pensjonat</title>
 </head>
 <body>
@@ -22,48 +37,98 @@
     </header>
     <main>
 
-        <a href="rezerwacja.php">
+        
         <div class="main">
         <form  method = "POST">
-            <h2>Koszt zakupów</h2>                          
+            <h2>Rezerwacja</h2>                          
 
-            wybierz artykuł:
+            Wybierz typ pokoju:
 
-            <select name="art">
-                <option value="1">Zeszyt 60 kartek</option>
-                <option value="2">Zeszyt 32 kartek</option>
-                <option value="3">Cyrkiel</option>
-                <option value="4">Linijka 30 cm</option>
+            <select name="pok">
+                <option value="1">Jednoosobowy</option>
+                <option value="2">Dwóosobowy</option>
+                <option value="3">Trzyosobowy</option>
             </select>
 
-            <br>
+            <br><br>
 
-            Liczba sztuk: 
-            <input type="number" name="razy">
+            od:
+            <input type="date" name="od" value="17.11.23">
+            <br><br>
+            do:
+            <input type="date" name="do" value="17.11.23">
 
-            <br>
+            <br><br>
+            Sezon: 
+            <select name="sezon">
+                <option value="lato">Lato</option>
+                <option value="zima">Zima</option>
+            </select>
 
-            <button type="submit">Oblicz</button>
+            <br><br>
+
+            <button type="submit">Rezerwuj</button>
             
-            <br>
+            <br><br>
 
             <?php 
-            $con = new mysqli('localhost','root','','');
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $con = new mysqli('localhost','root','','pensjonat');
 
-            $liczba = $_POST['razy'];
-            $artykuł = $_POST['art'];
-                
-                
-            $cena = $con->query('SELECT cena FROM `towary` WHERE id ="'.$artykuł.'"');
-            $cena1 = $cena->fetch_assoc();
+            $dataPoczatkowa = $_POST['od'];
+            $dataKoncowa = $_POST['do'];
+            $pok = $_POST['pok'];
+            $sezon = $_POST['sezon'];
 
-            $wynik = floatval($cena1["cena"]) * $liczba;
-            echo'wartosc zakupów: '. $wynik .' zł';
+            //sprawdza czy daty sa dobrze wybrane
+        if($dataPoczatkowa >= $dataKoncowa){
+            echo'Prosze wybrac inne daty';
+        }else{
+
+            // oblicza liczbe dni wybranych
+            $result = round((strtotime($dataKoncowa) - strtotime($dataPoczatkowa)) / 86400);
+
+               //sprawdza rezerwacje 
+
+               $zap2 = $con->query("SELECT * FROM rezerwacje WHERE (data_poczatkowa BETWEEN '$dataPoczatkowa' AND '$dataKoncowa') OR (data_koncowa BETWEEN '$dataPoczatkowa' AND '$dataKoncowa')");
             
+               $zajeteOkresy = mysqli_fetch_assoc($zap2);
+   
+               if(empty($zajeteOkresy)){
+
+            //dodaje rezerwacje
+
+            $zap1 = $con->query("INSERT INTO `rezerwacje` VALUES ( '','$pok', '$result', '$sezon','$dataPoczatkowa','$dataKoncowa')");
+                
+            // pobiera cene i liczy cene
+
+            $zap = $con->query('Select cena from pokoje where id = '.$pok.'');
+
+            $wyn = mysqli_fetch_array($zap);
+        
+            if ($sezon == 'lato') {
+                $cena=floatval(($wyn['cena']*1.5)*$result);
+            }
+            else{
+                $cena=$wyn['cena']*$result;
+            }
+            echo'
+            Liczba dni:'.$result.'<br>
+            Cena:<h3>'. $cena.'zł </h3>'; 
+        
+        }else{
+            echo'Podany termin jest zajety';
+        }
+    }
+        }
+            
+        
             ?>
+            <br>
+            <br>
+            * w sezonie letnim naliczamy +50% do ceny
            
         </div>
-        </a>
 
         <a href="oferta.php">
         <div class="main2">
@@ -80,91 +145,12 @@
         </a>
 
     </main>
-    
+    <footer>
+        <div class="stopka">
+            <center>
+                Strone wykonał:Czarek
+            </center>
+        </div>
+    </footer>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styl.css">
-    <title>Pensjonat</title>
-</head>
-<body>
-    <header>
-        <div class="baner1">
-           <h1><p> Pensjonat pod dobrym humorem</p> </h1>
-        </div>
-        <div class="baner2">
-            <h3>
-            Kontakt: +48 123 456 789
-            <br>
-            Pensjonat@gmail.com
-            </h3>
-        </div>
-    </header>
-    <main>
 
-        <a href="rezerwacja.php">
-        <div class="main">
-        <form  method = "POST">
-            <h2>Koszt zakupów</h2>                          
-
-            wybierz artykuł:
-
-            <select name="art">
-                <option value="1">Zeszyt 60 kartek</option>
-                <option value="2">Zeszyt 32 kartek</option>
-                <option value="3">Cyrkiel</option>
-                <option value="4">Linijka 30 cm</option>
-            </select>
-
-            <br>
-
-            Liczba sztuk: 
-            <input type="number" name="razy">
-
-            <br>
-
-            <button type="submit">Oblicz</button>
-            
-            <br>
-
-            <?php 
-            $con = new mysqli('localhost','root','','');
-
-            $liczba = $_POST['razy'];
-            $artykuł = $_POST['art'];
-                
-                
-            $cena = $con->query('SELECT cena FROM `towary` WHERE id ="'.$artykuł.'"');
-            $cena1 = $cena->fetch_assoc();
-
-            $wynik = floatval($cena1["cena"]) * $liczba;
-            echo'wartosc zakupów: '. $wynik .' zł';
-            
-            ?>
-           
-        </div>
-        </a>
-
-        <a href="oferta.php">
-        <div class="main2">
-            <h1>Nasza oferta</h1>
-            <img src="main.jpg" alt="Pensjonat">
-        </div>
-        </a>
-
-        <a href="index.php">
-        <div class="main3">
-            <h1>Strona główna</h1>
-            <img src="main.jpg" alt="Pensjonat">
-        </div>
-        </a>
-
-    </main>
-    
-</body>
->>>>>>> c8492db1c21c45b515e66eb5091aadb62dd56314
-</html>

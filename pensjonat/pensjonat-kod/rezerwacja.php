@@ -1,19 +1,3 @@
-<?php 
-   function zarezerwujOkres($dataPoczatkowa, $dataKoncowa, $con) {
-            
-    $sql = "
-    SELECT * FROM rezerwacje WHERE 
-    (data_poczatkowa BETWEEN ? AND ?) OR (data_koncowa BETWEEN ? AND ?)";
-
-    $zap2 = $con->prepare($sql);
-    $zap2->bind_param("ssss", $dataPoczatkowa, $dataKoncowa, $dataPoczatkowa, $dataKoncowa);
-    $zap2->execute();
-    $result2 = $zap2->get_result();
-    $zajeteOkresy = $result2->fetch_all(MYSQLI_ASSOC);
-
-if ($zajeteOkresy) {
-    echo "Okres jest już zarezerwowany. Wybierz inny termin.";}
-}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +65,7 @@ if ($zajeteOkresy) {
             $sezon = $_POST['sezon'];
 
             //sprawdza czy daty sa dobrze wybrane
-        if($dataPoczatkowa >= $dataKoncowa){
+        if($dataPoczatkowa >= $dataKoncowa AND $dataPoczatkowa >= date_default_timezone_set('Europe')){
             echo'Prosze wybrac inne daty';
         }else{
 

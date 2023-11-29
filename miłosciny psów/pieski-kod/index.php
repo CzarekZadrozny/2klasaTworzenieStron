@@ -14,11 +14,11 @@
     </header>
     <main>
         <div class="lewy">
-            <img src="obraz.jpg" alt="foksterierl">
+            <img src="spies.jpg" alt="foksterierl">
         </div>
         <div class="prawy1">
-            <form>
-                <center>
+            <form method="post">
+                
             <h2>Zaloguj lub dołącz</h2>
             e-mail:
             <input type="text" name="Login">
@@ -28,7 +28,41 @@
         <br><br>
             <button type="submit">Zaloguj</button>
             lub <a href="dolacz.html">Dolącz</a>
-            </center>
+            <br>
+
+            <?php 
+            $con = new mysqli('localhost','root','','pies');
+
+            if($_SERVER)
+
+            $login = $_POST["Login"];
+            $haslo = $_POST["haslo"];
+            $haslo1 = sha1($haslo);
+
+            
+            $haslo2 = $con->query("SELECT haslo from uzytkownicy where login = '$login'");
+
+            $row = $haslo2 -> fetch_assoc();
+
+            if($haslo1 == $row['haslo']){
+                  echo'siejma';
+            }else{
+                echo 'nie działa';
+            }
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            ?>
+
         </form>
         </div>
     </main>

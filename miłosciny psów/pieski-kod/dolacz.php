@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styl_index.css">
+    <link rel="stylesheet" href="styl_dolacz.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,15 +19,22 @@
         <div class="prawy1">
             <form method="post">
                 
-            <h2>Zaloguj lub dołącz</h2>
-            Login:
-            <input type="text" name="login">
+            <h2>Stwórz konto</h2>
+
+            Stwórz login
+            <input type="text" name="Login">
             <br><br>
-            hasło:
+
+            Stwórz hasło
             <input type="password" name="haslo">
-        <br><br>
-            <button type="submit" name="haslo">Zaloguj</button>
-            lub <a href="dolacz.php">Dolącz</a>
+            <br><br>
+
+            Powtórz hasło
+            <input type="password" name="haslo1">
+            <br><br>
+
+            <button type="submit">Dołącz</button>
+
             <br>
 
             <?php 
@@ -35,17 +42,17 @@
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-            $login = $_POST["login"];
-            $haslo = $_POST['haslo'];
-            
-            $zaphaslo = $con->query("SELECT haslo from uzytkownicy where uzytkownicy.login = '$login'");
+            $login = $_POST["Login"];
+            $haslo = $_POST["haslo"];
+            $haslo3 = $_POST["haslo1"];
 
-            $row = $zaphaslo->fetch_assoc();
+            if($haslo === $haslo3){
+                $zap = $con -> query("INSERT INTO `uzytkownicy` (`id`, `login`, `haslo`) VALUES (NULL, '$login', '$haslo')");
 
-            if($haslo == $row['haslo']){
-                  echo'poprawne';
+                echo 'dodano poprawnie';
+
             }else{
-                echo 'nie poprawnie';
+                echo 'działa nie poprawnie';
             }
             }
 

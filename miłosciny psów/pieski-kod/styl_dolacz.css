@@ -1,0 +1,33 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    
+    }
+    .baner{
+        background-color: saddlebrown;
+        color: white;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+    }
+    .lewy{
+        background-color: tan;
+        height: 500px;
+        width: 40%;
+        float: left;
+    
+    }
+    .prawy1{
+        height: 500px;
+        width: 60%;
+        background-color: tan;
+        float: right;
+    }
+    .stopka{
+        background-color: saddlebrown;
+        color: white;
+    
+    }
+    form{
+        margin: 5px;
+    }

@@ -26,7 +26,7 @@
             hasło:
             <input type="password" name="haslo">
         <br><br>
-            <button type="submit" name="haslo">Zaloguj</button>
+            <button type="submit">Zaloguj</button>
             lub <a href="dolacz.php">Dolącz</a>
             <br>
 
@@ -42,26 +42,26 @@
 
             $row = $zaphaslo->fetch_assoc();
 
-            if($haslo == $row['haslo']){
-                  echo'poprawne';
+            $odpowiedz = sha1($haslo);
+
+            if($odpowiedz == $row['haslo']){
+                  echo' prawidłowo';
             }else{
-                echo 'nie poprawnie';
+                echo'nie prawidłowo' ;
             }
-            }
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            }    
             ?>
 
         </form>
+        </div>
+        <div class="prawy2">
+        <br><br><br><br>
+                  <h2>Zapraszamy wszytstkich</h2>
+                    <ol>
+                        <li>włascicieli psów</li>
+                        <li>weterynarzy</li>
+                        <li>zoofili</li>
+                     </ol> 
         </div>
     </main>
     <footer>

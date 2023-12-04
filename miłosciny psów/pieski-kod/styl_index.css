@@ -18,7 +18,7 @@ margin: auto;
 
 }
 .prawy1{
-    height: 500px;
+    height: 200px;
     width: 60%;
     background-color: tan;
     float: right;
@@ -30,4 +30,11 @@ margin: auto;
 }
 form{
     margin: 5px;
+    background-color: ;
+}
+.prawy2{
+    background-color: tan;
+    float: right;
+    height: 300px;
+    width: 60%;
 }

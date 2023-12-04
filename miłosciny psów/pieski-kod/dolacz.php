@@ -37,6 +37,8 @@
 
             <br>
 
+            <a href="index.php">Wróc nas strone głowna</a>
+
             <?php 
             $con = new mysqli('localhost','root','','pies');
 
@@ -45,9 +47,10 @@
             $login = $_POST["Login"];
             $haslo = $_POST["haslo"];
             $haslo3 = $_POST["haslo1"];
+            $shahaslo = sha1($haslo);
 
             if($haslo === $haslo3){
-                $zap = $con -> query("INSERT INTO `uzytkownicy` (`id`, `login`, `haslo`) VALUES (NULL, '$login', '$haslo')");
+                $zap = $con -> query("INSERT INTO `uzytkownicy` (`id`, `login`, `haslo`) VALUES (NULL, '$login', '$shahaslo')");
 
                 echo 'dodano poprawnie';
 

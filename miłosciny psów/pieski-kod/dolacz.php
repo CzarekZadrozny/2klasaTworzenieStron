@@ -37,7 +37,6 @@
 
             <br>
 
-            <a href="index.php">Wróc nas strone głowna</a>
 
             <?php 
             $con = new mysqli('localhost','root','','pies');
@@ -49,6 +48,17 @@
             $haslo3 = $_POST["haslo1"];
             $shahaslo = sha1($haslo);
 
+            if(empty($login) OR empty($haslo)){
+                echo'Uzupełnij pola!';
+
+            }else{
+                $login1 = $con ->query('SELECT login from uzytkownicy');
+                $row = $login1->fetch_assoc();
+
+                if($login === $row['login']){
+                    echo'Login juz istnieje';
+                }else{
+
             if($haslo === $haslo3){
                 $zap = $con -> query("INSERT INTO `uzytkownicy` (`id`, `login`, `haslo`) VALUES (NULL, '$login', '$shahaslo')");
 
@@ -57,21 +67,21 @@
             }else{
                 echo 'działa nie poprawnie';
             }
-            }
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            }   }
+        }
             ?>
+            <br><br>
+            <a href="index.php">Wróc nas strone głowna</a>
 
         </form>
+        </div>
+        <div class="prawy2">
+            <h2>Dlaczego warto dołaczyc na nasze forum?</h2>
+            <ol>
+                <li>Mamy potwierdzonych specialistów którzy tylko czekaja by ci pomóc </li>
+                <li>Wysoki poziom intefesju graficznego</li>
+                <li>Oraz wiele innych czynników które sprawiaja ze nasze forum jest najchetniej odwiedzanie w całej POlSCE</li>
+            </ol>
         </div>
     </main>
     <footer>

@@ -1,0 +1,37 @@
+*{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.baner1{
+    background-color: rgb(24, 24, 24);
+    width: 60%;
+    color: white;
+    float: left;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.baner2{
+    width: 40vw;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    float: right;
+    height: 10vh;
+    text-align: center;
+}
+.baner2{
+    display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+.search{
+    width:40%;
+    height: 40%;
+}

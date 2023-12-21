@@ -14,8 +14,15 @@
            
         </div>
         <div class="baner2">
+            <input type="text" name="zap" id="zap" placeholder="Szukaj..." class="search">
+
+          
+        </div>
+        <div class="baner3">
             <label for="zap">
-            <input type="text" name="zap" id="zap" placeholder="Szukaj..."><img src="search.png" class="search"></label>
+                <img src="lupa1.png" alt="lupa" class="lupa">
+            </label>
+        
         </div>
     </header>
     

@@ -1,10 +1,11 @@
 *{
+    background-color: rgb(61, 61,61);
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 .baner1{
     background-color: rgb(24, 24, 24);
-    width: 60%;
+    width: 50%;
     color: white;
     float: left;
     height: 10vh;
@@ -16,10 +17,11 @@
     align-content: center;
 }
 .baner2{
-    width: 40vw;
-    background-color: rgb(26, 26, 26);
+    width: 30vw;
+    background-color: rgb(25, 25, 25);
     color: white;
-    float: right;
+    float: left;
+    
     height: 10vh;
     text-align: center;
 }
@@ -32,6 +34,25 @@ align-items: center;
 align-content: center;
 }
 .search{
-    width:40%;
-    height: 40%;
+    border-radius: 25px;
+    width: 220px;
+    background-repeat: no-repeat;
+    background-position: 190px;
+    color: white ;
 }
+.lupa{
+    margin-top: -80px;
+}
+.baner3{
+    width: 20vw;
+    float: right;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(25, 25, 25);
+}
+

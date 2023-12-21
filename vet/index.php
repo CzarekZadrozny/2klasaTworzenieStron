@@ -14,17 +14,27 @@
            
         </div>
         <div class="baner2">
-            <input type="text" name="zap" id="zap" placeholder="Szukaj..." class="search">
-
+            <form action="" class="wyszukiwanie">
+            <input type="text" name="zap" id="zap" placeholder="Szukaj..." class="search" />
+            <button class="btn1"><img src="lupa1.png" alt=""></button>
+            </form>
           
-        </div>
-        <div class="baner3">
-            <label for="zap">
-                <img src="lupa1.png" alt="lupa" class="lupa">
-            </label>
         
         </div>
+        <div class="przyciski">
+            <a href=""><button class="btn2">O nas</button></a>
+            <a href=""><button class="btn2">Oferta</button></a>
+            <a href=""><button class="btn2">x</button></a>
+            <a href=""><button class="btn2">kontakt</button></a>
+            <a href=""><button class="btn2">regulamin</button></a>
+
+        </div>
     </header>
+    <main>
+        <div class="zdjecia">
+            
+        </div>
+    </main>
     
 </body>
-</html>
+</html

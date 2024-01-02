@@ -1,0 +1,30 @@
+KARTA PRACY  
+Projekt strony internetowej 
+Co bêdziemy robiæ w tym razem? Projektujemy stronê internetow¹, tak od pocz¹tku, wed³ug projektu  wybranego przez klienta. Niby proste zadanie ale czy na pewno! To siê oka¿e.  
+Na lekcji robiliœmy du¿o projektów stron internetowych. Pisaliœmy skrypty które umo¿liwia³y interakcjê z  u¿ytkownikiem. Teraz sprawdzam czego siê nauczyliœcie :) Tym razem nie ma instrukcji, wymagañ co do budowy i  wygl¹du witryny, specyfikacji dzia³ania skryptu. W za³¹czniku tylko mockup czyli projekt graficzny strony. Jak to z  projektami bywa koñcowy efekt nie musi byæ identyczny. Klientowi podoba siê taki uk³ad strony, co do kolorystyki oraz dodatkowych efektów daje Wam woln¹ rêkê. Mo¿ecie poszaleæ i pokazaæ jakimi jesteœcie frontend-owcami.  
+Aha, do projektu do³¹czam równie¿ link do prototypu projektu graficznego czêœciowo interaktywny.  Mo¿e wam siê przydaæ.  
+https://www.figma.com/proto/HtnwYrb9KWNz99i54BPQiA/prototyp?page-id=0%3A1&node-id=52- 63&viewport=347%2C82%2C0.44&scaling=min-zoom&starting-point-node-id=52%3A63 
+Poni¿ej umieszczam treœæ zadania czyli troche wiêcej informacji o firmie, inaczej zadañ bo chcê daæ Wam  mo¿liwoœæ wyboru. Sami decydujecie siê jakie zlecenie wybierzecie. Powodzenia!!!  
+ZADANIE 1. 
+Bran¿a: Wydarzenie muzyczne 
+Czym siê zajmuje?: Alter to cykliczny festiwal muzyki alternatywnej, organizowany w Warszawie. Na  festiwalowej scenie maj¹ okazjê zagraæ zespo³u o ogólnopolskiej s³awie oraz lokalni, pocz¹tkuj¹cy artyœci.  Pierwsza edycja wydarzenia mia³a miejsce w 2015 roku i od tego czasu organizatorzy buduj¹ silne œrodowisko  artystyczno-organizatorskie stoj¹ce za tym wydarzeniem. Wydarzenie ze wzglêdu na ró¿norodnoœæ artystyczn¹  trwa 3 dni.  
+Jaki jest charakter marki?: Alternatywna, odwa¿na, ciekawa, otwarta, ciep³a, zamyœlona 
+Kim / jacy s¹ odbiorcy marki?: Wydarzenie kierowane jest do osób m³odych, s³uchaj¹cy muzyki  alternatywnej – sceny polskiej oraz zagranicznej. S¹ to osoby energiczne, nowoczesne i zwi¹zane z kierunkami  artystycznymi.  
+Do czego d¹¿y?: Marka d¹¿y do budowania swojej silnej pozycji na arenie wydarzeñ muzycznych w  Polsce, a w dalszej kolejnoœci w Europie Œrodkowej dlatego potrzebuje ciekawej, dynamicznej strony  internetowej.  
+Jakie s¹ wartoœci marki?: Wolnoœæ, otwartoœæ, zaufanie, estetyka, klimat  
+Jakie spe³nia oczekiwania?: Wydarzenie jest odpowiedzi¹ na potrzeby artystyczno-muzyczne oraz  towarzyskie. Jest to wydarzenie podczas, które mo¿e spêdziæ czas ze znajomymi oraz zdobywaæ nowe znajomoœci  i kontakty, ludzi podobnych do nas. Super by by³o gdyby na stronie by³a mo¿liwoœæ zalogowania siê na forum,  które umo¿liwi³oby wymianê ciekawymi informacjami ze œwiata muzyki ale nie tylko.  
+Co wyró¿nia markê?: Zakres muzyczny z jakim wystêpuj¹ artyœci na scenie festiwalowej oraz ukazywanie  przekroju zespo³ów i artystów, bior¹c pod uwagê ich rozpoznawalnoœæ w kraju i w Europie. 
+Z czym siê kojarzy?: energia, ciep³o, klimatycznoœæ, otwartoœæ, radoœæ 
+STRONA 1 
+
+ZADANIE 2. 
+KARTA PRACY  
+Projekt strony internetowej 
+
+Nazwa firmy: Gabinet weterynaryjny Fauna 
+Opis dzia³alnoœci: Jesteœmy rodzeñstwem (siostra i brat), które kocha pomagaæ zwierzêtom. Postawiliœmy na w³asn¹ praktykê i otworzyliœmy niewielki gabinet w Toruniu, w którym zatrudniamy kilka osób. Naszym  g³ównym klientem s¹ w³aœciciele psów i kotów, ale zdarza siê pomagaæ równie¿ gryzoniom, gadom, a nawet  ptakom. Traktujemy siê jako lokalny gabinet i nasza klientela to g³ównie mieszkañcy okolicznych osiedli. To, co nas wyró¿nia to fakt, ¿e jesteœmy jednym z nielicznych tutaj gabinetów weterynaryjnych dzia³aj¹cych ca³odobowo. 
+Opis zadania: Zale¿y nam przede wszystkim na tym aby byæ widocznym w sieci. Chcemy aby za pomoc¹  strony mo¿na siê by³o umówiæ na wizytê, a po zalogowaniu siê w³aœciciel pupila, móg³ zobaczyæ czy zbli¿a siê na  przyk³ad termin kolejnego szczepienia.  
+Nasza wizja projektu: Chcielibyœmy unikaæ znaków, które ma po³owa gabinetów w okolicy. To zazwyczaj  po³¹czenie sylwetki psa i kota. Liczymy na jak¹œ wiêksz¹ kreatywnoœæ ze strony projektanta ? Mo¿e warto w jakiœ  sposób zaznaczyæ to, ¿e podchodzimy bardzo indywidualnie do naszych klientów, znamy ich imiona (i imiona ich  w³aœcicieli), staramy siê utrzymywaæ rodzinn¹ atmosferê w zespole i poza nim, bo wiemy, jak stresuj¹ce mog¹ byæ 
+wizyty (zw³aszcza z chorym czworonogiem). Nie mamy preferowanych konkretnych kolorów, ani niczego w tym  stylu.  
+Grupa docelowa: W³aœciciele, g³ównie psów i kotów z Torunia i okolicy.  
+Konkurencja: Jest kilka gabinetów w mieœcie, ale nie traktujemy siê jako konkurencja. Raczej wiêkszoœæ  klientów wybiera nas, bo jesteœmy najbli¿ej lub otwarci ca³¹ dobê. 

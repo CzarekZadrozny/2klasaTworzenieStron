@@ -98,6 +98,8 @@ align-content: center;
     font-size: 150px;
     color: white;
     opacity: 0.4;
+    background-color: black;
+    height: 170px;
   }
   .nastpeny{
     position: absolute;
@@ -108,5 +110,7 @@ align-content: center;
     font-size: 150px;
     color: white;
     opacity: 0.4;
+    height: 170px;
+    background-color: black;
   }
 

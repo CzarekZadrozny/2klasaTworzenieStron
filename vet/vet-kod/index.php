@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weterynarz 24/7</title>
     <link rel="stylesheet" href="styl.css">
-    <script src="obrazki.js"></script>
+    <script>
+        
+
+    var obrazki = ["zdj1.jpg", "zdj2.jpg", "zdj3.jpg"];
+    var a = 0;
+    var ileObrazkow = obrazki.length - 1;
+
+    function poprzedni() {
+        if (document.images && a > 0) {
+            a--;
+            document.images.obrazek.src = obrazki[a];
+        }
+    }
+
+    function nastepny() {
+        if (document.images && a < ileObrazkow) {
+            a++;
+            document.images.obrazek.src = obrazki[a];
+        }
+    }
+
+    </script>
 </head>
 <body>
     <header>
@@ -33,10 +54,9 @@
     </header>
     <main>
         <div class="zdjecia">
-            <img src="zdj1.jpg" alt="pies1">
+            <img name="obrazek" src="zdj1.jpg" alt="pies1">
             <button onclick="poprzedni()" class="poprzedni"> ◀ </button>
             <button onclick="nastepny()" class="nastpeny"> ▶ </button>
-
             
         </div>
     </main>

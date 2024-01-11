@@ -79,7 +79,7 @@ align-content: center;
     height: 1.5vw;
     margin-right: 25px;
     background-color: rgb(43, 43,43);
-    margin-top: 5px;
+    margin-top: 5px; 
   }
   .btn2:hover{
     background-color: rgb(61,61,61);

@@ -2,6 +2,7 @@
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
+    background-color: rgb(61, 61,61);
 }
 .baner1{
     background-color: rgb(24, 24, 24);
@@ -54,7 +55,6 @@ align-content: center;
   .wyszukiwanie:focus-within { 
     outline: 1px solid white; 
   }
-  .wyszukiwanie{}
   
   .btn1 {
     border:1px solid rgb(61, 61,61);
@@ -70,7 +70,7 @@ align-content: center;
     text-align: center;
     background-color: rgb(61, 61,61);
     text-align: right;
-    height: 138px;
+    height: 7vw;
   }
   .btn2{
     color: whitesmoke;
@@ -92,32 +92,63 @@ align-content: center;
   .poprzedni{
     position: absolute;
     left: 0;
-    top: 30%;
+    top: 12vw;
     border: none;
     background: none;
     font-size: 150px;
-    color: white;
-    opacity: 0.4;
-    background-color: black;
+    color: black;
     height: 170px;
+    opacity: 0.5;
   }
   .nastpeny{
     position: absolute;
     right: 0;
-    top: 30%;
+    top: 12vw;
     border: none;
     background: none;
     font-size: 150px;
-    color: white;
-    opacity: 0.4;
+    color: black;
     height: 170px;
-    background-color: black;
+    opacity: 0.5;
   }
   .main{
     color: black;
     position: absolute;
     width: 80%;
-    border: 2px solid black;
+    border: 2px solid white;
     height: 500px;
+    right: 10vw;
+    left: 10vw;
+    top: 25vw;
+    border-radius: 25px;
+    background-color: rgb(43, 43,43);
+  }
+ 
+  p{
+    width: 10vw;
+    height: 10vw;
+    background-color: pink;
+  }
+  .kloc1{
+    height: 15vw;
+    width: 24vw;
+    text-align: center;
+    margin: 1.3vw;
+    float: right;
+    margin-right: 15px;
+  }
+  .kloc2{
+    height: 15vw;
+    width: 24vw;
+    text-align: center;
+    margin: 1.3vw;  
+    float: right;  
+  }
+  .kloc3{
+    height: 15vw;
+    width: 24vw;
+    text-align: center;
+    margin: 1.3vw;
+    float: right; 
   }
 

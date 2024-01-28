@@ -40,9 +40,25 @@
             <button onclick="nastepny()" class="nastpeny"> ▶ </button>
             
         </div>
+        
         <div class="main">
-            lalalal
+            <div class="kloc1">
+                <p></p>
+                Godziny otwarcia
+            </div>
+
+            <div class="kloc2">
+                <p></p>
+                Godziny otwarcia
+            </div>
+
+            <div class="kloc3">
+                <p></p>
+                Godziny otwarcia
+            </div>
+            
         </div>
+    
     </main>
     
 </body>

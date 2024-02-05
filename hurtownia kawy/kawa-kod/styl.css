@@ -1,0 +1,40 @@
+*{
+    margin: auto;
+    font-family: garmond;
+}
+.logo{
+    background-color: olive;
+    width: 25%;
+    height: 110px;
+    float: right;
+}
+.menu{
+    background-color: olive;
+    width: 75%;
+    height: 70px;
+    float: left;
+    padding-top: 40px;
+    
+}
+.przycisk{
+    text-decoration: none;
+    color:white;
+    padding: 75px;
+    align-items: center;
+}
+.zdj1{
+    height: 110px;
+}
+.baner{
+    width: 100%;
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+.kawa{
+    height: 400px;
+}
+.lewy{
+    background-color: wheat;
+}

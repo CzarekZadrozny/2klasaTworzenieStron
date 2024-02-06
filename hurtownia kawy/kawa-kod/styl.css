@@ -26,13 +26,12 @@
     height: 110px;
 }
 .baner{
-    width: 100%;
     background-color: saddlebrown;
     color: white;
     text-align: center;
     padding: 30px;
 }
-.kawa{
+.kawa1{
     height: 600px;
 }
 .lewy{
@@ -45,4 +44,10 @@
     width: 50%;
     background-color: wheat;
     height: 604px;
+}
+.stopka{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 30px;
 }

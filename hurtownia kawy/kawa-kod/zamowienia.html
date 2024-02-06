@@ -40,12 +40,47 @@
             <li>Bez kofeinowa</li>
             <li>Zielona</li>
         </ol>
+        <br>
+        <p>Podaj numer kawy:&nbsp;<input type="number" id="liczba1"></p>
+        <p>Podaj wage w dekagramach:&nbsp;<input type="number" id="liczba2"></p>
+        <button onclick="oblicz()">Zamów</button>
+        <p><output id="v"></output></p>
     </div>
 </main>
 
 <footer>
     <div class="stopka">Strone przygotwał: Czarekk</div>
-</footer>    
+</footer>
+
+
+
+<script>
+    function oblicz(){
+  var kawa = parseInt(liczba1.value)
+  var dg = parseFloat(liczba2.value)
+  var t
+  if(kawa == 1){
+  t = dg*5
+  t ="Koszt zamówienia wynosi: " + t + " zł"
+
+  }
+  else if(kawa == 3){
+  t = dg*7
+  t ="Koszt zamówienia wynosi: " + t + " zł"
+
+  }
+  else if(kawa == 4){
+  t = dg*6
+  t ="Koszt zamówienia wynosi: " + t + " zł"
+
+  }
+  else{
+      t = "Koszt zamówienia wynosi: 0 zł" 
+  }
+  v.value=t
+    }
+  </script>
+    
 </body>
 </html>
 

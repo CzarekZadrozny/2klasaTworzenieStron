@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="baner">
+            <h1>Malowanie pokoi i biur</h1>
+        </div>
+    </header>
+    <main>
+        <div class="lewy">
+            <h2>Menu</h2>
+            <ol>
+                <li><a href="mieszamy.html">Mieszamy</a></li>
+                <li><a href="cena.html">Wyceniamy</a></li>
+
+            </ol>
+        </div>
+        <div class="center">
+            <h2>Zapotrzebowanie na farbe</h2>
+
+            Powierzchnia w m<sup>2</sup>
+            <input type="number" id="liczba">
+            
+            <br>
+
+            <button id="btn">Policz</button>
+            <br>
+
+            <output id="wynik"></output>
+        </div>
+        <div class="prawy">
+            <img src="zdjecie.png" alt="Probki farb">
+        </div>
+    </main>
+    <footer>
+        <div class="stopka">
+            <h3>MALARZ</h3>
+            <p>Strone opracował: Czarek </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",funkcja);
+
+        function funkcja(){
+            var a = liczba.value    
+            var w 
+            w = Math.ceil(a*0.25) + 'litr'
+            wynik.value =w
+        }
+    </script>
+</body>
+</html>

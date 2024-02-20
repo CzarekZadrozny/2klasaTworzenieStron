@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="baner">
+            <h1 id="napis">Malowanie pokoi i biur</h1>
+        </div>
+    </header>
+    <main>
+        <div class="lewy">
+            <h2>Menu</h2>
+            <ol>
+                <li><a href="mieszamy.html">Mieszamy</a></li>
+                <li><a href="cena.html">Wyceniamy</a></li>
+
+            </ol>
+        </div>
+        <div class="center">
+            <h2>Barwy i ich pochodne</h2>
+            <table>
+                <tr>
+                    <td colspan="2">Składniowe</td>
+                    <td>Wynik</td>
+                </tr>
+                <tr>
+                    <td class="kolorek">yellow</td>
+                    <td class="kolorek">red</td>
+                    <td class="kolorek">orange</td>
+                </tr>
+                <tr>
+                    <td class="kolorek">blue</td>
+                    <td class="kolorek">red</td>
+                    <td  class="kolorek">purple</td>
+                </tr>
+            </table>
+        </div>
+        <div class="prawy">
+            <img src="zdjecie.png" alt="Probki farb">
+        </div>
+    </main>
+    <footer>
+        <div class="stopka">
+            <h3>MALARZ</h3>
+            <p>Strone opracował: Czarek </p>
+        </div>
+    </footer>
+    <script>
+   const kolor = document.querySelectorAll('.kolorek');
+
+kolor.forEach(a => {
+  const color = a.textContent.trim(); 
+  
+  a.addEventListener('mouseenter', function() {  
+    this.style.backgroundColor = color;
+  });
+  
+  a.addEventListener('mouseleave', function() {
+    this.style.backgroundColor = 'initial';
+  });
+});
+
+    </script>
+</body>
+</html>

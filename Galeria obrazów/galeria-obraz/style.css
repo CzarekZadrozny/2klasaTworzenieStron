@@ -1,0 +1,45 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: mistyrose;
+    color: rgb(62, 39, 35);
+    text-align: center;
+}
+.lewy{
+    width: 20%;
+    height: 600px;
+    padding: 30px;
+    box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.5);
+    opacity: 10px;
+    float: left;
+}
+.zdjlewy{
+    width: 100%;
+}
+.prawy{
+    width: 65%;
+    height: 600px;
+    float: right;
+    padding-right: 150px ;
+}
+.zdj{
+    width: 140px;
+    padding: 2px;
+    border-radius: 5%;
+
+}
+.zdj:hover{
+    border:1px solid black ;
+    
+}
+.stopka{
+    width: 100%;
+    float: left;
+    height: 50px;
+}
+table{
+    border: 1px solid black;
+    margin-left: 110px;
+}
+.photo{
+    width: 650px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="baner">
+            <h1>Galeria obrazów</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="lewy">
+            <img src="zdjecie.jpg" alt="zdjecie dnia" class="zdjlewy">
+            <h3>zdjecia opublikowali</h3>
+        
+            <table>
+                <td>Kraj</td>
+                <td>Polubienia</td>
+                <tr></tr>
+                <td>Francja</td>
+                <td>0</td>
+                <tr></tr>
+                <td>Niemcy</td>
+                <td>0</td>
+                <tr></tr>
+                <td>Norwegia</td>
+                <td>0</td>
+                <tr></tr>
+                <td>Polska</td>
+                <td>0</td>
+                <tr></tr>
+                <td>Grecja</td>
+                <td>0</td>
+                <tr></tr>
+                <td>Rosja</td>
+                <td>0</td>
+            </table>
+        </div>
+        <div class="prawy">
+           
+            <input type="submit" value="prev" onclick="prev()">
+
+            <img src="zdjecie.jpg" alt="galeria" id="photo" class="photo">
+
+            <input type="submit" value="next" onclick="next()">
+
+            <hr>
+
+            <img src="1.jpg" alt="minatura" onclick="zdj('1.jpg')" class="zdj">
+            <img src="2.jpg" alt="minatura" onclick="zdj('2.jpg')" class="zdj">
+            <img src="3.jpg" alt="minatura" onclick="zdj('3.jpg')" class="zdj">
+            <img src="4.jpg" alt="minatura" onclick="zdj('4.jpg')" class="zdj">
+            <img src="5.jpg" alt="minatura" onclick="zdj('5.jpg')" class="zdj">
+           
+
+        </div>
+    </main>
+    <footer>
+        <div class="stopka">
+            <a href="https://pixabay.com/">Wiecej obrazów</a> <br>
+            Galerie wykonał: Czarek
+        </div>
+    </footer>
+
+    <script>
+        let zdj = 1;
+
+        function next(){
+            zdj = zdj % 5 + 1;
+            document.getElementById("photo").src = zdj + '.jpg';
+
+        }
+    </script>
+    
+</body>
+</html>

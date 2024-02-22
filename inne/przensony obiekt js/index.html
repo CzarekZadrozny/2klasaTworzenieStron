@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przenośny obiekt</title>
+    <style>
+        #obiekt {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="obiekt"></div>
+
+<script>
+    const obiekt = document.getElementById('obiekt');
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    // Funkcja do aktualizowania pozycji obiektu
+    function moveObiekt(e) {
+        if (isDragging) {
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+
+            obiekt.style.left = x + 'px';
+            obiekt.style.top = y + 'px';
+        }
+    }
+
+    // Rozpoczęcie przesuwania obiektu
+    obiekt.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        offsetX = e.clientX - obiekt.getBoundingClientRect().left;
+        offsetY = e.clientY - obiekt.getBoundingClientRect().top;
+    });
+
+    // Zakończenie przesuwania obiektu
+    document.addEventListener('mouseup', function() {
+        isDragging = false;
+    });
+
+    // Aktualizacja pozycji obiektu podczas przeciągania myszą
+    document.addEventListener('mousemove', moveObiekt);
+</script>
+
+</body>
+</html>

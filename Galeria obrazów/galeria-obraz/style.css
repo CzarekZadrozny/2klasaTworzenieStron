@@ -6,9 +6,8 @@
 }
 .lewy{
     width: 20%;
-    height: 600px;
+    height: 700px;
     padding: 30px;
-    box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.5);
     opacity: 10px;
     float: left;
 }
@@ -17,7 +16,7 @@
 }
 .prawy{
     width: 65%;
-    height: 600px;
+    height: 700px;
     float: right;
     padding-right: 150px ;
 }
@@ -38,8 +37,16 @@
 }
 table{
     border: 1px solid black;
-    margin-left: 110px;
+    text-align: center;
+    margin-left: 67px;
 }
 .photo{
-    width: 650px;
+    width: 550px;
+    margin-top: 50px;
+}
+.lewy1{
+    height: 600px;
+    box-shadow: 8px 8px 24px 8px gray;
+    width: 80%;
+
 }

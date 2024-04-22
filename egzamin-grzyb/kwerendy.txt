@@ -1,0 +1,11 @@
+kw1.
+SELECT id, nazwa, potoczna from grzyby WHERE jadalny = 1;
+
+kw2.
+SELECT grzyby.potoczna, rodzina.nazwa FROM grzyby JOIN rodzina ON grzyby.rodzina_id = rodzina.id WHERE grzyby.potrawy_id = '4';
+
+kw3.
+SELECT nazwa_pliku, nazwa FROM grzyby;
+
+kw4.
+ALTER TABLE rodzina ADD COLUMN opis varchar(25);

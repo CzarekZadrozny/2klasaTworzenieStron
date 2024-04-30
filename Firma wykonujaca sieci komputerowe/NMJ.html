@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Zamówienia hurtowe</title>
+</head>
+<body onload="Sprawdz('1'), Sprawdz('2'), Sprawdz('3'), Sprawdz('4')" onchange="Sprawdz('1')">
+    <div class="baner">
+        <h1>Sieci komputerowe</h1>
+    </div>
+    <div class="blok-lewy">
+        <h2>Aktualizacja i zamówienia materiałow</h2>
+        <br>
+        <p>Do wewnętrznego użytku firmy</p>
+        <br>                                            
+        <img src="obraz.png" alt="sieć komputerowa">
+    </div>
+    <div class="blok-prawy">
+        <table>
+            <tr>
+                <th>Produkt</th><th>Jednostka</th><th>Dostępna ilość</th><th>Aktualizacja</th><th>Zamówienie</th>
+            </tr>
+            <tbody id="tabela">
+            <tr>
+                <td>Skrętka U/UTP drut</td>
+                <td>metr</td>
+                <td id="Ilosc1">20</td>
+                <td><button onclick="aktualizacja('1')">Aktualizuj</button></td>
+                <td><button onclick="zamow('1')">Zamów</button></td>
+              </tr>
+              <tr>
+                <td>Skrętka U/UTP linka</td>
+                <td>metr</td>
+                <td id="Ilosc2" >2</td>
+                <td><button onclick="aktualizacja('2')">Aktualizuj</button></td>
+                <td><button onclick="zamow('2')">Zamów</button></td>
+              </tr>
+              <tr>
+                <td>Wtyki 8P8C</td>
+                <td>sztuki</td>
+                <td id="Ilosc3" >10</td>
+                <td><button onclick="aktualizacja('3')">Aktualizuj</button></td>
+                <td><button onclick="zamow('3')">Zamów</button></td>
+              </tr>
+              <tr>
+                <td>Moduły Keystone</td>
+                <td>sztuki</td>
+                <td id="Ilosc4">30</td>
+                <td><button onclick="aktualizacja('4')">Aktualizuj</button></td>
+                <td><button onclick="zamow('4')">Zamów</button></td>
+              </tr>
+            </tbody>
+              <tr>
+                <td><input type="text" id="Produkt"></td>
+                <td><input type="text" id="Jednostka"></td>
+                <td><input type="number" id="DostIlosc"></td>
+                <td></td>
+                <td><button onclick="Dodaj()">Dodaj</button></td>
+              </tr>
+        </table>
+    </div>
+    <footer>
+        <a href="http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Stronę przygotował: Mateusz Morawiecki</p>
+    </footer>
+</body>
+<script>
+    function SprawdzWszystkie(){
+        document.querySelectorAll('[id^="Ilosc"]').forEach(function(element){
+            Sprawdz(element.id.slice(-1));
+        });
+    }
+    function Sprawdz(s){
+        var IloscElement = document.querySelector('#Ilosc' + s);
+        var Ilosc = IloscElement.innerText;
+        if(parseInt(Ilosc) === 0){
+            IloscElement.style.backgroundColor = 'red';
+        }
+        else if(parseInt(Ilosc) >= 1 && parseInt(Ilosc) <= 5){
+            IloscElement.style.backgroundColor = 'yellow';
+        }
+        else{
+            IloscElement.style.backgroundColor = 'honeydew'
+        }
+    }
+    function aktualizacja(x){
+        var NewAmount = prompt("Podaj nową ilość:");
+        if(NewAmount == ''){
+            document.querySelector('#Ilosc' + x).innerHTML = '0';
+        }
+        else{
+        document.querySelector('#Ilosc' + x).innerHTML = NewAmount;
+        }
+        SprawdzWszystkie();
+    }
+    function zamow(y){
+        var amount = parseInt(document.querySelector('#Ilosc' + y).innerText);
+        document.querySelector('#Ilosc' + y).innerHTML = amount+1;
+        SprawdzWszystkie();
+    }
+    var NewId = 5;
+    function Dodaj(){
+        var Produkt = document.getElementById('Produkt').value;
+        if(Produkt == ''){
+            Produkt = 'Kabel Lan';
+        }
+        var Jednostka = document.getElementById('Jednostka').value;
+        if(Jednostka == ''){
+            Jednostka = 'metr';
+        }
+        var DostIlosc = document.getElementById('DostIlosc').value;
+        if(DostIlosc == ''){
+            DostIlosc = 0;
+        }
+        document.getElementById('tabela').innerHTML += '<tr> <td>'+Produkt+'</td> <td>'+Jednostka+'</td> <td id="Ilosc'+NewId+'">'+DostIlosc+'</td> <td><button onclick="aktualizacja('+NewId+')">Aktualizuj</button></td> <td><button onclick="zamow('+NewId+')">Zamów</button></td> </tr>';
+        SprawdzWszystkie();
+        NewId += 1;
+    }
+</script>
+</html>

@@ -14,7 +14,7 @@
     </header>
     <main>
         <div class="lewy">
-            <h2>Aktualizacja i zamowienia materiałów</h2>
+            <h3>Aktualizacja i zamowienia materiałów</h3>
             <p>Do wewnetrzego uzytku firmy</p>
             <img src="obraz-removebg-preview.png" alt="sieć komputerowa">
         </div>
@@ -33,37 +33,37 @@
                     <td>Zamowienia</td>
                 </tr>
                 <tr  class="tabelka">
-                    <td class="tabelka" id="nazwa1">Skrętka U/UTP drut</td>
+                    <td class="tabelka">Skrętka U/UTP drut</td>
                     <td  class="tabelka">metr</td>
-                    <td class="wartosc" id="1"><x>6</x></td>
+                    <td class="wartosc" id="1">6</td>
                     <td class="tabelka"><button onclick="Aktualizuj(1)">Aktualizuj</button></td>
                     <td class="tabelka"><button onclick="Zamow(1)">Zamów</button></td>
                 </tr>
                 <tr  class="tabelka">
-                    <td class="tabelka" id="nazwa2">Skrętka U/UTP linka</td>
+                    <td class="tabelka">Skrętka U/UTP linka</td>
                     <td class="tabelka">metr</td>
-                    <td class="wartosc" id="2"><x>2</x></td>
+                    <td class="wartosc" id="2">7</td>
                     <td class="tabelka"><button onclick="Aktualizuj(2)">Aktualizuj</button></td>
                     <td class="tabelka"><button onclick="Zamow(2)">Zamów</button></td>
                 </tr>
                 <tr class="tabelka">
-                    <td class="tabelka" id="nazwa3">Wtyki 8P8C</td>
+                    <td class="tabelka">Wtyki 8P8C</td>
                     <td class="tabelka">metr</td>
-                    <td class="wartosc" id="3"><x>40</x></td>
+                    <td class="wartosc" id="3">40</td>
                     <td class="tabelka"><button onclick="Aktualizuj(3)">Aktualizuj</button></td>
                     <td class="tabelka"><button onclick="Zamow(3)">Zamów</button></td>
                 </tr>
                 <tr class="tabelka">
-                    <td class="tabelka" id="nazwa4">Moduły Keystone</td>
+                    <td class="tabelka">Moduły Keystone</td>
                     <td class="tabelka">metr</td>
-                    <td class="wartosc" id="4"><x>0</x></c></td>
+                    <td class="wartosc" id="4">9</c></td>
                     <td class="tabelka"><button onclick="Aktualizuj(4)">Aktualizuj</button></td>
                     <td class="tabelka"><button onclick="Zamow(4)">Zamów</button></td>
                 </tr>
                 <tr id="table1"></tr>
                 <tr id="table2"></tr>
             </table>
-            <button onclick="nowa()">Dodaj</button>
+            <button onclick="Nowa()">Dodaj</button>
         </div>
     </main>
     <footer>
@@ -76,153 +76,5 @@
     
 </body>
 </html>
-<script src="sigma.js">
-    // var x = 0;
-    // var xyz;
-    // var n;
-    // var t;
-    // var A;
-    // var Z;
-    // var l = 6;
-   
-    // const list = document.querySelectorAll("x");
-    // // if 0
-       
-    //     if(list[1].innerHTML == 0){
-    //         document.getElementById("liczbaa2").style.backgroundColor = 'Red'
-    //     }
-    //     if(list[2].innerHTML == 0){
-    //         document.getElementById("liczbaa3").style.backgroundColor = 'Red'
-    //     }
-    //     if(list[3].innerHTML == 0){
-    //         document.getElementById("liczbaa4").style.backgroundColor = 'Red'
-    //     }
-    // // if < 3
-       
-    //     if(list[1].innerHTML < 3 && list[1].innerHTML > 0){
-    //         document.getElementById("liczbaa2").style.backgroundColor = 'orange'
-    //     }
-    //     if(list[2].innerHTML < 3 && list[2].innerHTML > 0){
-    //         document.getElementById("liczbaa3").style.backgroundColor = 'orange'
-    //     }
-    //     if(list[3].innerHTML < 3 && list[3].innerHTML > 0){
-    //         document.getElementById("liczbaa4").style.backgroundColor = 'orange'
-    //     }
-    // // f zamawiania
-    //     function Z1(){
-    //         x++
-    //    var name = document.getElementById('nazwa1').innerHTML
-    //    alert('Zamowienie nr: '+ x+' ' + name)
-    //     }
-    //     function Z2(){
-    //         x++
-    //    var name2 = document.getElementById('nazwa2').innerHTML
-    //    alert('Zamowienie nr: '+ x+' ' + name2)
-
-    //     }
-    //     function Z3(){
-    //         x++
-    //    var name3 = document.getElementById('nazwa3').innerHTML
-    //    alert('Zamowienie nr: '+ x+' ' + name3)
-
-    //     }
-    //     function Z4(){
-    //         x++
-    //    var name4 = document.getElementById('nazwa4').innerHTML
-    //    alert('Zamowienie nr: '+ x+' ' + name4)
-    //     }
-
-    //     function A1(){
-    //     var s = prompt("Z aktualizuja wartosc: ")
-    //     document.getElementById("liczbaa1").innerHTML = s
-    //     if(s == 0){
-    //         document.getElementById("liczbaa1").style.backgroundColor = 'Red'
-    //     }
-    //     else
-    //     if(s < 3 && s > 0){
-    //         document.getElementById("liczbaa1").style.backgroundColor = 'orange'
-    //     }
-    //     else{
-    //         document.getElementById("liczbaa1").style.backgroundColor = 'white'
-    //     }
-    //     }
-
-    //     function A2(){
-    //     var s = prompt("Z aktualizuja wartosc: ")
-    //     document.getElementById("liczbaa2").innerHTML = s
-    //     if(s == 0){
-    //         document.getElementById("liczbaa2").style.backgroundColor = 'Red'
-    //     }
-    //     else
-    //     if(s < 3 && s > 0){
-    //         document.getElementById("liczbaa2").style.backgroundColor = 'orange'
-    //     }
-    //     else{
-    //         document.getElementById("liczbaa2").style.backgroundColor = 'white'
-    //     }
-    //     }
-        
-    //     function A3(){
-    //     var s = prompt("Z aktualizuja wartosc: ")
-    //     document.getElementById("liczbaa3").innerHTML = s
-    //     if(s == 0){
-    //         document.getElementById("liczbaa3").style.backgroundColor = 'Red'
-    //     }else
-    //     if(s < 3 && s > 0){
-    //         document.getElementById("liczbaa3").style.backgroundColor = 'orange'
-    //     }
-    //     else{
-    //         document.getElementById("liczbaa3").style.backgroundColor = 'white'
-    //     }
-    //     }
-
-    //     function A4(){
-    //     var s = prompt("Z aktualizuja wartosc: ")
-    //     document.getElementById("liczbaa4").innerHTML = s
-    //     if(s == 0){
-    //         document.getElementById("liczbaa4").style.backgroundColor = 'Red'
-    //     }
-    //     else
-    //     if(s < 3 && s > 0){
-    //         document.getElementById("liczbaa4").style.backgroundColor = 'orange'
-    //     }
-    //     else{
-    //         document.getElementById("liczbaa4").style.backgroundColor = 'white'
-    //     }
-    //     }
-    //     function A5(){
-    //         var s = prompt("Z aktualizuja wartosc: ")
-    //     document.getElementById("liczbaa5").innerHTML = s
-    //     if(s == 0){
-    //         document.getElementById("liczbaa5").style.backgroundColor = 'Red'
-    //     }
-    //     else
-    //     if(s < 3 && s > 0){
-    //         document.getElementById("liczbaa5").style.backgroundColor = 'orange'
-    //     }
-    //     else{
-    //         document.getElementById("liczbaa5").style.backgroundColor = 'white'
-    //     }
-    //     }
-    //     function Z5(){
-    //         x++
-    //    var name5 = document.getElementById('nazwa5').innerHTML
-    //    alert('Zamowienie nr: '+ x+' ' + name5)
-    //     }
-
-    //     function nowa(){
-           
-    //          var nazwa = prompt("Podaj nazwe produku")
-    //          var typ = prompt("Podaj jednostke")
-    //          var wiersz = document.createElement("tr");
-    //          wiersz.innerHTML ='<tr class="tabelka"> <td class="tabelka" id="'+id+'">'+ nazwa +'</td> <td class="tabelka">'+ typ +'</td> <td class="tabelka" id="'+id+'"><x>0</x></c></td> <td class="tabelka"><button onclick="A()">Aktualizuj</button></td> <td class="tabelka"><button onclick="Z()">Zamów</button></td> </tr>'
-    //          var dodanie = document.getElementById('table');
-    //          dodanie.appendChild(wiersz);
-    //          l++
-    //         }
-    //     function A(o){
-    //     var s = prompt("Z aktualizuja wartosc: ")
-    //     document.getE
-        
-</script>
+<script src="sigma.js"></script>
 

@@ -35,6 +35,9 @@ function Nowa(){
     var wiersz = document.createElement("tr");
     wiersz.innerHTML ='<tr class="tabelka"> <td class="tabelka">'+ nazwa +'</td> <td class="tabelka">'+ typ +'</td> <td class="wartosc" id="'+NoweId+'">0</td> <td class="tabelka"><button onclick="Aktualizuj('+NoweId+')">Aktualizuj</button></td> <td class="tabelka"><button onclick="Zamow('+NoweId+')">Zamów</button></td> </tr>'
     var dodanie = document.getElementById('table');
+    var wiersz = document.createElement("tr");
+    wiersz.innerHTML ='<tr class="tabelka"> <td class="tabelka">'+ nazwa +'</td> <td class="tabelka">'+ typ +'</td> <td class="wartosc" id="'+NoweId+'">0</td> <td class="tabelka"><button onclick="Aktualizuj('+NoweId+')">Aktualizuj</button></td> <td class="tabelka"><button onclick="Zamow('+NoweId+')">Zamów</button></td> </tr>'
+    var dodanie = document.getElementById('table');
     dodanie.appendChild(wiersz);
     NoweId ++;
     sprawdz()

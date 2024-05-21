@@ -1,0 +1,39 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: Linen;
+    color: #222;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .banner {
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  table {
+    margin: 40px auto;
+  }
+  td {
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  a {
+    color: #aaa;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+  }
+  

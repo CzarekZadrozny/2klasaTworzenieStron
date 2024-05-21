@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <div class="baner1">
+            <img src="logo.jpg" alt="matematyka">
+        </div>
+        <div class="baner2">
+            <h1>Pomocnik Matematyczny</h1>
+        </div>
+        <div class="baner3">
+            <a href="dzialania.html">Działania</a>
+        </div>
+        <div class="baner4">
+            <a href="mnozenie.html">Tabliczka mnozenia</a>
+        </div>
+    </header>
+    <body>
+        <div class="lewy">
+            <h3>Proste działania</h3>
+            Liczba A:
+            <input type="number" id="liczbaA"> <br>
+            Liczba B: 
+            <input type="number" id="liczbaB"> <br>
+            Liczba C: 
+            <input type="number" id="liczbaC"> <br>
+
+            <button onclick="Dodawanie()">+</button>
+            <button onclick="Odejmowanie()">-</button>
+            <button onclick="Mnozenie()">*</button>
+            <button onclick="Dzielenie()">/</button>
+            <button onclick="Potega()">A^B</button>
+            <button onclick="FunkcjaKwadratowa()">FK</button>
+            <p id="w"></p>
+        </div>
+        <div class="prawy">
+            <ul>
+                <li>dodawanie</li>
+                <li>odejmowanie</li>
+                <li>mnozenie</li>
+                <li>dzielenie</li>
+                <li>potegowanie</li>
+            </ul>
+        </div>
+    </body>
+    <footer>
+        <div class="stopka">
+            <p>Autor:Czarek Zadrożny</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+<script>
+    function Dodawanie(){
+        var a = parseFloat(document.getElementById('liczbaA').value);
+        var b = parseFloat(document.getElementById('liczbaB').value);
+        var w = a + b;
+        document.getElementById('w').innerHTML="Wynik: " + w;  
+    }
+    function Odejmowanie(){
+        var a = parseFloat(document.getElementById('liczbaA').value);
+        var b = parseFloat(document.getElementById('liczbaB').value);
+        var w = a - b;
+        document.getElementById('w').innerHTML="Wynik: " + w;  
+    }
+    function Mnozenie(){
+        var a = parseFloat(document.getElementById('liczbaA').value);
+        var b = parseFloat(document.getElementById('liczbaB').value);
+        var w = a * b;
+        document.getElementById('w').innerHTML="Wynik: " + w;  
+    }
+    function Dzielenie(){
+        var a = parseFloat(document.getElementById('liczbaA').value);
+        var b = parseFloat(document.getElementById('liczbaB').value);
+        var w = a / b;
+        document.getElementById('w').innerHTML="Wynik: " + w;  
+    }
+    function Potega(){
+        var a = parseFloat(document.getElementById('liczbaA').value);
+        var b = parseFloat(document.getElementById('liczbaB').value);
+        var w = a**b;
+        document.getElementById('w').innerHTML="Wynik: " + w;  
+    }
+    function FunkcjaKwadratowa(){
+        var a = parseFloat(document.getElementById('liczbaA').value);
+        var b = parseFloat(document.getElementById('liczbaB').value);
+        var c = parseFloat(document.getElementById('liczbaB').value);
+        var delta = (b*b)-4*(a*c);
+        p = (-b)/2*a
+        q = (-delta)/4*a
+        document.getElementById('w').innerHTML="Wyniki: <br> Delta:" + delta + "<br> P: " + p + "<br> q: " + q 
+    }
+
+</script>

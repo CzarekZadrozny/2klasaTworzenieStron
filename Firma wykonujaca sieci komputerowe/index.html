@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamowienia hurtowe</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <div class="baner">
+            <h1>Sieci komputerowe</h1>
+        </div>
+    </header>
+    <main>
+        <div class="lewy">
+            <h3>Aktualizacja i zamowienia materiałów</h3>
+            <p>Do wewnetrzego uzytku firmy</p>
+            <img src="obraz-removebg-preview.png" alt="sieć komputerowa">
+        </div>
+        <div class="prawy">
+            <h2>Nasze produkty</h2>
+            <table class="tabelka" id="table">
+                <tr>
+                    <td>Produkt</td>
+
+                    <td>Jednostka</td>
+
+                    <td>Dostepna ilosc</td>
+
+                    <td>Aktualizacje i zamowienia</td>
+
+                    <td>Zamowienia</td>
+                </tr>
+                <tr  class="tabelka">
+                    <td class="tabelka">Skrętka U/UTP drut</td>
+                    <td  class="tabelka">metr</td>
+                    <td class="wartosc" id="1">6</td>
+                    <td class="tabelka"><button onclick="Aktualizuj(1)">Aktualizuj</button></td>
+                    <td class="tabelka"><button onclick="Zamow(1)">Zamów</button></td>
+                </tr>
+                <tr  class="tabelka">
+                    <td class="tabelka">Skrętka U/UTP linka</td>
+                    <td class="tabelka">metr</td>
+                    <td class="wartosc" id="2">7</td>
+                    <td class="tabelka"><button onclick="Aktualizuj(2)">Aktualizuj</button></td>
+                    <td class="tabelka"><button onclick="Zamow(2)">Zamów</button></td>
+                </tr>
+                <tr class="tabelka">
+                    <td class="tabelka">Wtyki 8P8C</td>
+                    <td class="tabelka">metr</td>
+                    <td class="wartosc" id="3">40</td>
+                    <td class="tabelka"><button onclick="Aktualizuj(3)">Aktualizuj</button></td>
+                    <td class="tabelka"><button onclick="Zamow(3)">Zamów</button></td>
+                </tr>
+                <tr class="tabelka">
+                    <td class="tabelka">Moduły Keystone</td>
+                    <td class="tabelka">metr</td>
+                    <td class="wartosc" id="4">9</c></td>
+                    <td class="tabelka"><button onclick="Aktualizuj(4)">Aktualizuj</button></td>
+                    <td class="tabelka"><button onclick="Zamow(4)">Zamów</button></td>
+                </tr>
+                <tr id="table1"></tr>
+                <tr id="table2"></tr>
+            </table>
+            <button onclick="Nowa()">Dodaj</button>
+        </div>
+    </main>
+    <footer>
+        <div class="stopka">
+            <a href="http://sieci.pl/">Nasza strona internetowa</a>
+            <p>Strone wykonał: Czarek</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
+<script src="sigma.js"></script>
+

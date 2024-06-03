@@ -15,31 +15,31 @@
 
     <main>
         <div class="lewy">
+            <div class="lewy1">
             <img src="zdjecie.jpg" alt="zdjecie dnia" class="zdjlewy">
-            <h3>zdjecia opublikowali</h3>
-        
+            <h3>Ilosc polubione</h3>
+            <center>
             <table>
                 <td>Kraj</td>
                 <td>Polubienia</td>
                 <tr></tr>
                 <td>Francja</td>
-                <td>0</td>
+                <td id="Fr">0</td>
                 <tr></tr>
                 <td>Niemcy</td>
-                <td>0</td>
+                <td id="Ge">0</td>
                 <tr></tr>
                 <td>Norwegia</td>
-                <td>0</td>
+                <td id="No">0</td>
                 <tr></tr>
-                <td>Polska</td>
-                <td>0</td>
+                <td >Polska</td>
+                <td id="Pl">0</td>
                 <tr></tr>
-                <td>Grecja</td>
-                <td>0</td>
-                <tr></tr>
-                <td>Rosja</td>
-                <td>0</td>
+                <td >Grecja</td>
+                <td id="Gr">0</td>
             </table>
+            </center>
+        </div>
         </div>
         <div class="prawy">
            
@@ -51,11 +51,16 @@
 
             <hr>
 
-            <img src="1.jpg" alt="minatura" onclick="zdj('1.jpg')" class="zdj">
-            <img src="2.jpg" alt="minatura" onclick="zdj('2.jpg')" class="zdj">
-            <img src="3.jpg" alt="minatura" onclick="zdj('3.jpg')" class="zdj">
-            <img src="4.jpg" alt="minatura" onclick="zdj('4.jpg')" class="zdj">
-            <img src="5.jpg" alt="minatura" onclick="zdj('5.jpg')" class="zdj">
+            <img src="1.jpg" alt="minatura" onclick="b('1.jpg')" class="zdj">
+            <img src="2.jpg" alt="minatura" onclick="b('2.jpg')" class="zdj">
+            <img src="3.jpg" alt="minatura" onclick="b('3.jpg')" class="zdj">
+            <img src="4.jpg" alt="minatura" onclick="b('4.jpg')" class="zdj">
+            <img src="5.jpg" alt="minatura" onclick="b('5.jpg')" class="zdj">
+
+            <br>
+
+            <img src="icon-off.png" alt="" onclick="f()" id="serce">
+
            
 
         </div>
@@ -68,13 +73,98 @@
     </footer>
 
     <script>
-        let zdj = 1;
+        let zdj = 0;
+        var i = 0;
+        Fr = 0;
+        Ge = 0;
+        No = 0;
+        Gr = 0;
+        Pl = 0;
 
         function next(){
             zdj = zdj % 5 + 1;
             document.getElementById("photo").src = zdj + '.jpg';
+        }
+        function prev(){
+            zdj = zdj  - 1;
+            if(zdj < 1){
+                zdj= 5
+            }else{
+            document.getElementById('photo').src = zdj + '.jpg';
+        }}
+        function b(a){
+            document.getElementById('photo').src = a;
+            u = a;
+        }
+
+
+        function f(){
+
+            if(i == 0){
+                x = 'icon-on.png';
+                document.getElementById('serce').src = x;
+                i = 1;
+
+                // Serduszka
+            
+            if(u == '1.jpg'){
+                w=Fr;
+                Fr++;
+
+            document.getElementById('Fr').innerHTML = w;
+            console.log(w);
+
+            }
+
+            if(u == '2.jpg'){
+                w=Ge;
+                Ge++;
+
+                document.getElementById('Ge').innerHTML = w;
+                console.log(w);
+
+            }
+            if(u == '3.jpg'){
+                
+                w = No;
+                No ++;
+
+                document.getElementById('No').innerHTML = w;
+                console.log(w);
+
+            }
+            if(u == '4.jpg'){
+                w=Pl;
+                Pl++;
+
+                document.getElementById('Pl').innerHTML = w;
+                console.log(w);
+
+            }
+            if(u == '5.jpg'){
+                w=Gr;
+                Gr++;
+
+                document.getElementById('Gr').innerHTML = w;
+                console.log(w);
+
+            }
+
+                
+            }
+            else
+            {
+            if(i == 1){
+                x = 'icon-off.png';
+                document.getElementById('serce').src = x;
+                i = 0;
+            }}
+
+
+            
 
         }
+    
     </script>
     
 </body>

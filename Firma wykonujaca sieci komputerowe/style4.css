@@ -1,0 +1,56 @@
+*{
+    text-align: center;
+    font-family: verdana;
+    margin: auto;
+}
+.baner{
+    background-color: darkgreen;
+    color: white;
+    width: 100%;
+}
+.lewy{
+    background-color: palegreen;
+    width: 30%;
+    height: 500px;
+    float: left;
+}
+.prawy{
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+    float: right;
+    box-sizing: border-box;
+    overflow-y:scroll;
+}
+.stopka{
+    background-color: palegreen;
+    width: 100%;
+    height: 100px;
+    float: left;
+   
+}
+table{
+    margin: auto;
+    width: 95%;
+}
+.tabelka{
+    border: solid 1px darkgreen;
+    border-collapse: collapse;
+}
+td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.wartosc{
+    border: solid 1px darkgreen;
+    border-collapse: collapse;
+    
+}
+h2{
+    margin-bottom: 30px;
+    margin-top: -50px;
+}
+

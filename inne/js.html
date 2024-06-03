@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Keyboard Events</h1>
+<h2>The key Property</h2>
+
+<p>Press a key on the keyboard in the input field.</p>
+
+<input type="text" size="40" onkeydown="myFunction(event)">
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) {
+  let key = event.key;
+  document.getElementById("demo").innerHTML = "The key was: " + key;
+  if(key = 'w'){
+    alert('sadsd')
+  }
+}
+
+</script>
+
+</body>
+</html>

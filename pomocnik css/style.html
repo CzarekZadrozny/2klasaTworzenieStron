@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomocnik CSS</title>
+<link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+<header>
+  <div class="baner">
+    <h1>Pomocnik CSS</h1>
+  </div>
+  <div class="baner2">
+        
+      <a href="kolory.html">Kolory</a>
+      <a href="czcionki.html">Czcionki</a>
+      <a href="style.html">Style CSS</a>
+      <a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a>
+    
+  </div>
+  </header>
+ 
+    <div class="main1">
+
+    <h2>Zobacz inne własciwosci dla ogołu </h2>
+    <p>wyglad</p>
+    <select name="" id="obr">
+      <option value="dotted">dotted</option>
+      <option value="dashed">dashed</option>
+      <option value="solid">solid</option>
+      <option value="double">double</option>
+    </select>
+    <p>kolor</p>
+    <input type="color" id="kolor">
+    <br>
+    <p>obramowanie (px)</p> 
+    <input type="number" id="num">
+    <button onclick="table()">Sprawdz</button>
+    </div>
+  </main>
+  <div class="main2">
+    <h2>Tabelka</h2>
+  <table id="table">
+    <tr id="table">
+        <td id="table1"><input type="text"></td>
+        <td id="table1"><input type="text"></td>
+    </tr>
+    <tr id="table">
+        <td id="table1"><input type="text"></td>
+        <td id="table1"><input type="text"></td>
+    </tr>
+  </table>
+  
+</div>
+  <footer class="footer">
+    <p>Autor: Czarek</p>
+  </footer>
+</div>
+<script src="skrypt.js"></script>
+</body>
+</html>
+<script>
+    function table(){
+        var obramowanie = document.getElementById('obr').value
+        var kolor = document.getElementById('kolor').value
+        var num = document.getElementById('num').value
+
+        const tabelka =  document.querySelectorAll('table, tr, td');
+        for (let i = 0; i < tabelka.length; i++){
+            tabelka[i].style.border = ""+num+"px "+kolor+" "+ obramowanie+"   ";
+        }
+    }
+</script>

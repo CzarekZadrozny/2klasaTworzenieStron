@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomocnik CSS</title>
+<link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+<header>
+  <div class="baner">
+    <h1>Pomocnik CSS</h1>
+  </div>
+  <div class="baner2">
+        
+      <a href="kolory.html">Kolory</a>
+      <a href="czcionki.html">Czcionki</a>
+      <a href="style.html">Style CSS</a>
+      <a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a>
+    
+  </div>
+  </header>
+  <main class="main">
+    <h2>Podaj składową H koloru w kodzie HSL</h2>
+    <p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+    <img src="zdj.jpg" alt="Przestrzeń barw HSL" width="500">
+    <input type="number" id="liczba" placeholder="0 – 360" max="360">
+    <button onclick="paleta()">Generuj paletę</button>
+    <table>
+      <tr><td colspan="4">Paleta kolorów</td></tr>
+      <tr>
+        <td id="1"></td>
+        <td id="2"></td>
+        <td id="3"></td>
+        <td id="4"></td>
+      </tr>
+    </table>
+  </main>
+  <footer class="footer">
+    <p>Autor: Czarek</p>
+  </footer>
+</div>
+<script>
+ function paleta() {
+  var liczba = document.getElementById('liczba').value;
+  document.getElementById('1').style.backgroundColor = 'hsl('+liczba+',80%,50%)'
+  document.getElementById('2').style.backgroundColor = 'hsl('+liczba+',60%,50%)'
+  document.getElementById('3').style.backgroundColor = 'hsl('+liczba+',40%,50%)'
+  document.getElementById('4').style.backgroundColor = 'hsl('+liczba+',20%,50%)'
+
+}</script>
+</body>
+</html>

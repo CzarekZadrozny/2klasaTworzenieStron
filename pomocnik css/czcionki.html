@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomocnik CSS</title>
+<link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+<header>
+  <div class="baner">
+    <h1>Pomocnik CSS</h1>
+  </div>
+  <div class="baner2">
+        
+      <a href="kolory.html">Kolory</a>
+      <a href="czcionki.html">Czcionki</a>
+      <a href="style.html">Style CSS</a>
+      <a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a>
+    
+  </div>
+  </header>
+  <main class="main">
+    <div class="main" style="text-align: center;">
+        Podaj rozmiar tekstu w procentach
+        <br>
+        <input type="number" id="value">%
+        <br>
+        Wybierz styl tekstu
+        <br>
+        <select id="lista">
+          <option>kursywa</option>
+          <option>prosty</option>
+          <option>pogrubienie</option>
+          <option>podkreślenie</option>
+        </select>
+        <br>
+        Podaj odstęp między literami (px)
+        <br>
+        <input type="number" id="letterSpacing">
+        <br>
+        <p>Jakim kolorem sformatować tekst?</p>
+        <input type="submit" id="redButton" value="" style="background-color: red;" onclick="changeColor('red')">
+        <input type="submit" id="blueButton" value="" style="background-color: blue;" onclick="changeColor('blue')">
+        <input type="submit" id="greenButton" value="" style="background-color: green;" onclick="changeColor('green')">
+        <p id="result">To jest przykład tekstu, który można edytować</p>
+      </div>
+  </main>
+  <footer class="footer">
+    <p>Autor: Czarek</p>
+  </footer>
+</div>
+<script src="skrypt.js"></script>
+</body>
+</html>
+<script>
+    function changeColor(color) {
+        var size = document.getElementById('value').value;
+        var style = document.getElementById('lista').value;
+        var spacing = document.getElementById('letterSpacing').value;
+        var resultStyle = "color:" + color + "; font-size:" + size + "%; letter-spacing:" + spacing + "px;";
+    
+        if (style === "kursywa") {
+            resultStyle += " font-style: italic;";
+        } else if (style === "pogrubienie") {
+            resultStyle += " font-weight: bold;";
+        } else if (style === "podkreślenie") {
+            resultStyle += " text-decoration: underline;";
+        }
+    
+        document.getElementById('result').style = resultStyle;
+    }
+    </script>

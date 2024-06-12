@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Ciąg Arytmetyczny</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  input[type="number"] {
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #005f5f;
+  }
+  #wynik {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #00796b;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <p>Wyraz początkowy: <input type="number" id="a1"></p>
+  <p>Różnica ciągu: <input type="number" id="r"></p>
+  <p>Liczba wyrazów: <input type="number" id="n"></p>
+  <button onclick="pokazCiag()">Pokaż ciąg</button>
+  <p id="wynik"></p>
+</div>
+
+<script>
+function pokazCiag() {
+  var a1 = parseInt(document.getElementById('a1').value);
+  var r = parseInt(document.getElementById('r').value);
+  var n = parseInt(document.getElementById('n').value);
+  var ciag = [];
+  for(var i = 0; i < n; i++) {
+    ciag.push(a1 + i * r);
+  }
+  document.getElementById('wynik').innerText = "Ciąg arytmetyczny zawiera wyrazy: " + ciag.join(', ') + ".";
+}
+</script>
+</body>
+</html>

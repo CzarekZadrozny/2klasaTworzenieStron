@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.baner {
+    background-color: rgb(60, 120, 160);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-image: url('motor.png');
+    background-size: cover;
+    padding: 20px;
+}
+
+.lewy {
+    background-color: rgba(0, 100, 0, 0.6);
+    color: white;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+    box-shadow: 10px 10px 7px dimgray;
+    overflow-y: auto;
+    height: 600px;
+}
+
+.prawy, .prawy2 {
+    background-color: rgba(0, 100, 0, 0.6);
+    color: white;
+    padding: 20px;
+    width: 25%;
+    height: auto;
+    box-shadow: 10px 10px 7px dimgray;
+    height: 300px;
+    float: right;
+    
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.stopka {
+    text-align: center;
+    background-color: rgb(60, 120, 160);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,64 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-y: hidden;
+}
+.motor-obraz{
+    display: block;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+}
+.baner{
+    background-color: rgb(60,120,160,0.9);
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.left{
+    background-color: rgb(0,100,0,0.6);
+    margin: 2%;
+    width: 75%;
+    height: 600px;
+    font-size: 120%;
+    overflow:scroll;
+    box-shadow: 10px 10px 7px dimgray;
+    float: left;
+}
+.right{
+    background-color: rgb(0,100,0,0.6);
+    margin: 2%;
+    width: 15%;
+    height: 300px;
+    box-shadow: 10px 10px 7px dimgray;
+    float: left;
+}
+footer{
+    background-color: rgb(60,120,160,0.9);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    height: 15vh;
+}
+h1, h2{
+    text-align: center;
+    text-decoration: dashed;
+}
+a, dt{
+    color: white;
+}
+dd{
+    padding: 1%;
+}
+dd:hover{
+    background-color: lightgreen;
+}
+p{
+    margin: 5px;
+}
